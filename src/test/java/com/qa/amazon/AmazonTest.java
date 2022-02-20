@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.scc.qa.base.TestBase;
+import com.qa.base.TestBase;
 
 public class AmazonTest extends TestBase {
 
@@ -60,7 +60,7 @@ public class AmazonTest extends TestBase {
 
 		// Waiting for the Added to Cart message
 		explicit_Wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//div[@id='attachDisplayAddBaseAlert']//h4[text()='Added to Cart']")));
+				By.xpath("//div[@id='attachDisplayAddBaseAlert']//i[@class='a-icon a-icon-alert']")));
 
 		// Clicking on the close button of the side window
 		driver.findElement(By.id("attach-close_sideSheet-link")).click();

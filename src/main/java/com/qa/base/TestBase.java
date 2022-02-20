@@ -1,4 +1,4 @@
-package com.scc.qa.base;
+package com.qa.base;
 
 /**
  * @author - Sudhanshu Tripathi
@@ -55,16 +55,16 @@ public class TestBase {
 		String methodName = name.getName();
 		if (prop.getProperty("want_To_Execute_On_Local").equalsIgnoreCase("No")) {
 
-			MutableCapabilities sauceOpts = new MutableCapabilities();
-			sauceOpts.setCapability("name", methodName);
-			sauceOpts.setCapability("build", "Java-W3C-Examples");
-			sauceOpts.setCapability("seleniumVersion", "4.1.1");
-			sauceOpts.setCapability("username", prop.getProperty("username"));
-			sauceOpts.setCapability("accessKey", prop.getProperty("accessKey"));
-			sauceOpts.setCapability("tags", "w3c-chrome-tests");
+			MutableCapabilities sauceOptions = new MutableCapabilities();
+			sauceOptions.setCapability("name", methodName);
+			sauceOptions.setCapability("build", "Java-W3C-Examples");
+			sauceOptions.setCapability("seleniumVersion", "4.1.1");
+			sauceOptions.setCapability("username", prop.getProperty("username"));
+			sauceOptions.setCapability("accessKey", prop.getProperty("accessKey"));
+			sauceOptions.setCapability("tags", "w3c-chrome-tests");
 
 			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setCapability("sauce:options", sauceOpts);
+			cap.setCapability("sauce:options", sauceOptions);
 			cap.setCapability("browserVersion", versionName);
 			cap.setCapability("platformName", platformName);
 

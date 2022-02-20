@@ -10,7 +10,7 @@
   </test>  -->
 
 	<test name="Test on saucelab with FF">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="version" value="latest" />
 		<parameter name="platform" value="windows 10" />
 
@@ -22,7 +22,7 @@
 	</test>
 
 	<!--	<test name="Test on saucelab with Chrome">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="firefox" />
 		<parameter name="version" value="latest" />
 		<parameter name="platform" value="macOS 10.15" />
 
