@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Amazon Suite" parallel="tests">
+
+	<!-- <test thread-count="5" name="Amazon Test">
+    <classes>
+      <class name="com.qa.amazon.AmazonTest"/>
+      <class name="com.qa.amazon.APITest"/>
+    </classes>
+  </test>  -->
+
+	<test name="Test on saucelab with FF">
+		<parameter name="browser" value="firefox" />
+		<parameter name="version" value="latest" />
+		<parameter name="platform" value="windows 10" />
+
+		<classes>
+			<class name="com.qa.amazon.AmazonTest" />
+			<class name="com.qa.amazon.APITest" />
+		</classes>
+
+	</test>
+
+	<!--	<test name="Test on saucelab with Chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="latest" />
+		<parameter name="platform" value="macOS 10.15" />
+
+		<classes>
+			<class name="com.qa.amazon.AmazonTest" />
+			<class name="com.qa.amazon.APITest" />
+		</classes>
+	</test>  -->
+
+
+</suite> <!-- Amazon Suite -->
